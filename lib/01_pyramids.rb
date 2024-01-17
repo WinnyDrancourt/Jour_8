@@ -1,11 +1,11 @@
 def ask_stair
-        stair = 0
+    stair = 0
     loop do 
     puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ? (choisi un nombre impair)"
         stair = gets.chomp.to_i
         break if stair.odd?
     end
-    return stair
+    return stair = stair/2+1
 end
 
 # def half_pyramid(stair)
@@ -17,7 +17,6 @@ end
 # end
 
 def full_pyramid(stair)
-    stair = stair/2+1
     puts "Voici la pyramide :"
     for number in 1..stair
         (stair-number).times {print " "}
@@ -28,7 +27,6 @@ def full_pyramid(stair)
     
 end
 def Reverse_pyramid(stair)
-    stair = stair/2+1
     for number in 1..(stair-1)
         (number).times {print " "}
         (stair-number).times {print "#"}
